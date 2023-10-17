@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Principal</title>
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+    
+    {% block content %}
+    
+    {% endblock %}
+
+{% comment %} <form action="{% url 'menuProceso' %}" method="get">
+    <input type="submit" value="Ir a Proceso">
+</form> {% endcomment %}
+
+ <!-- Botón para la vista de Procesos -->
+{% comment %} <a href="/proceso/menuProceso/">
+    <button>Ir a Procesos</button>
+</a>  {% endcomment %}
+
+{% comment %} <!-- Botón para la vista de PAA -->
+<a href="{% url 'paa:vista_paa' %}">
+    <button>Ir a PAA</button>
+</a>
+
+<!-- Botón para la vista de Abogados y Contratistas -->
+<a href="{% url 'abogados_contratistas:vista_abogados_contratistas' %}">
+    <button>Ir a Abogados y Contratistas</button>
+</a> {% endcomment %}
+
+</body>
+</html>
